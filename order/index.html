@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .products {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .products .product {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .products .product:hover {
+            transform: scale(1.05);
+        }
+        .products .product img {
+            width: 100%;
+            height: auto;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product p {
+            color: #555;
+            font-size: 1.1em;
+            margin: 5px 0 15px;
+        }
+        .product button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 600px) {
+            .products .product {
+                width: 100%;
+                max-width: 100%;
+                margin: 10px 0;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .menu a {
+                margin: 0 10px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+    <script>
+        function showProducts() {
+            document.querySelector('.products').style.display = 'block';
+        }
+
+        function selectProduct(productName) {
+            window.location.href = `rate.html?product=${encodeURIComponent(productName)}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="header">
+            <h1>Kainan sa Halamanan</h1>
+        </div>
+
+        <div class="menu">
+            <a onclick="showProducts()">Menu</a>
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <img src="1.jpg" alt="Braised Chicken">
+                <h3>Dinuguan</h3>
+                <p>Price: ₱50.00</p>
+                <button onclick="selectProduct('Braised Chicken')">Select</button>
+            </div>
+
+            <div class="product">
+                <img src="2.jpg" alt="Pork Sisig">
+                <h3>Pork Sisig</h3>
+                <p>Price: ₱50.00</p>
+                <button onclick="selectProduct('Pork Sisig')">Select</button>
+            </div>
+
+            <div class="product">
+                <img src="3jpg.jpg" alt="Bopis">
+                <h3>Bopis</h3>
+                <p>Price: ₱50.00</p>
+                <button onclick="selectProduct('Bopis')">Select</button>
+            </div>
+
+            <div class="product">
+                <img src="4.jpg" alt="Menudo">
+                <h3>Menudo</h3>
+                <p>Price: ₱50.00</p>
+                <button onclick="selectProduct('Menudo')">Select</button>
+            </div>
+
+            <div class="product">
+                <img src="5.jpg" alt="Pork Steak">
+                <h3>Pork Steak</h3>
+                <p>Price: ₱50.00</p>
+                <button onclick="selectProduct('Pork Steak')">Select</button>
+            </div>
+            <div class="product">
+                <img src="6.jpg" alt="Bicol Express">
+                <h3>Bicol Express</h3>
+                <p>Price: ₱50.00</p>
+                <button onclick="selectProduct('Bicol Express')">Select</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
