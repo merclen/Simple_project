@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Terminal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/student-checkin.css">
+</head>
+
+<body>
+
+<header class="app-header">
+    <div class="header-left">🎓 Learning Commons</div>
+    <div class="header-right">
+        <button class="header-btn" onclick="openModal()">+ Register</button>
+    </div>
+</header>
+
+<div id="registerModal" class="modal-overlay">
+    <div id="modalCard" class="modal-content">
+        <div class="card">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h3 class="title">Student Registration</h3>
+            <form id="studentForm">
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" id="fullName" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">School ID</label>
+                    <input type="text" id="schoolIdReg" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select id="gender" class="form-select" required>
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Register</button>
+            </form>
+            <div id="registerMessage" class="mt-2 text-center"></div>
+        </div>
+    </div>
+</div>
+
+<div class="main-wrapper">
+<div class="container-fluid h-100">
+<div class="row h-100 align-items-center">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 d-flex justify-content-center">
+        <div class="card shadow-sm text-center w-100" style="max-width:500px;">
+            <h3>Student ID</h3>
+            <input type="text" id="schoolId" class="form-control mb-3" placeholder="School ID" autofocus>
+            <div id="message"></div>
+        </div>
+    </div>
+    <div class="col-md-3 d-flex flex-column align-items-center">
+        <div class="dark-box w-100">
+            <div id="clock">
+                <div class="time">00:00</div>
+                <div class="date">YYYY-MM-DD</div>
+            </div>
+        </div>
+        <div class="dark-box stats-box w-100">
+            <div>← Inside <span id="insideCount">0</span></div>
+            <div>👨 Male <span id="maleCount">0</span></div>
+            <div>👩 Female <span id="femaleCount">0</span></div>
+            <div>🔄 Visit <span id="visitCount">0</span></div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+    © 2026 Student Attendance System —&nbsp;
+    <a href="https://example.com" style="color: inherit; text-decoration: none; cursor: pointer;">
+        Merclen Locsin
+    </a>&nbsp;(Programmer & Designer)
+</footer>
+
+<script src="../assets/js/student-checkin.js"></script>
+</body>
+</html>

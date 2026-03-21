@@ -1,0 +1,76 @@
+/* Override or add styles specific to this page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+
+/* Main content adjustments */
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+/* Table container with card-like style */
+.table-container {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Table header */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.table-header h4 {
+    font-weight: 600;
+}
+
+/* Register button style */
+.register {
+    background:#3b82f6; 
+    color:white; 
+    border:none;
+    padding:6px 15px; 
+    border-radius:8px;
+}
+.register:hover {
+    background:#2563eb;
+}
+
+/* Search input */
+#search {
+    width: 100%;
+    max-width: 300px;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+/* Table styles */
+.table th {
+    cursor:pointer;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+}
+
+/* Modal adjustments */
+.modal-content {
+    border-radius: 16px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .sidebar {display:none;}
+    .main-content {margin-left:0;}
+}

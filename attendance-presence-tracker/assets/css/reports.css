@@ -1,0 +1,58 @@
+/* Page-specific styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+
+/* Main content adjustments */
+.main {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+/* Topbar */
+.topbar h3 {
+    font-weight: 600;
+}
+
+/* Export buttons container */
+.export-controls {
+    background:white;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom:30px;
+}
+.export-btn {
+    background:#3b82f6;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+    margin-top:5px;
+}
+.export-btn:hover {
+    background:#2563eb;
+}
+
+/* Charts container */
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+.charts canvas {
+    background:white;
+    border-radius:16px;
+    padding:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .sidebar {display:none;}
+    .main {margin-left:0;}
+    .charts {flex-direction:column;}
+}

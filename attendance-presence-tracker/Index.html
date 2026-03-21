@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#eef2f7,#d9e4f5);
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px 30px;
+}
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+.hero p {
+    color: #6b7280;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-main {
+    background: #3b82f6;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 25px;
+    border: none;
+}
+.btn-main:hover {
+    background: #2563eb;
+}
+
+/* Cards */
+.option-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <span class="navbar-brand">🎓 Pulse</span>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero container">
+    <div class="row w-100 align-items-center">
+        
+        <!-- Left -->
+        <div class="col-md-6">
+            <h1>Track Student Presence with Ease</h1>
+            <p>
+                A modern system for managing student check-ins, monitoring attendance,
+                and generating reports — all in one place.
+            </p>
+            <a href="#options" class="btn btn-main">Get Started</a>
+        </div>
+
+        <!-- Right -->
+        <div class="col-md-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" width="300" alt="students">
+        </div>
+
+    </div>
+</section>
+
+<!-- Options -->
+<section id="options" class="container mb-5">
+    <div class="row g-4">
+
+        <!-- Student Portal -->
+        <div class="col-md-6">
+            <div class="option-card">
+                <h3>👨‍🎓 Student Portal</h3>
+                <p>Check in using your school ID and register if you're new.</p>
+                <a href="./student-hub/student-checkin.html" class="btn btn-main">Go to Portal</a>
+            </div>
+        </div>
+
+        <!-- Admin Panel -->
+        <div class="col-md-6">
+            <div class="option-card">
+                <h3>🛠 Admin Panel</h3>
+                <p>Manage students, view reports, and monitor activity.</p>
+                <a href="./admin-panel/admin.html" class="btn btn-main">Open Dashboard</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 Student Presence System — Merclen Locsin
+</div>
+
+</body>
+</html>
