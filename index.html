@@ -4,37 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project Hub</title>
-    <!-- Bootstrap CSS (optional for dropdown styling) -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for extra flair -->
+    <style>
+        /* Page background with subtle texture */
+        body {
+            background-color: #f8f9fa;
+            background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23ced4da' fill-opacity='0.15'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Custom navbar styling */
+        .navbar {
+            background-color: #2d3748 !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #f7fafc !important;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            font-size: 1.25rem;
+        }
+        .nav-link:hover, .dropdown-item:hover {
+            color: #4299e1 !important;
+        }
+        .dropdown-menu {
+            background-color: #2d3748;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .dropdown-item {
+            color: #f7fafc !important;
+        }
+
+        /* Hero section to welcome visitors */
+        .hero-section {
+            padding: 6rem 0 4rem;
+            text-align: center;
+            color: #2d3748;
+        }
+        .hero-title {
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Project categories section */
+        .projects-section {
+            padding: 2rem 0 6rem;
+        }
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        .category-title {
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #4299e1;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .project-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f3f5;
+        }
+        .project-item:last-child {
+            border-bottom: none;
+        }
+        .project-link {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        .project-link:hover {
+            color: #2c5282;
+            text-decoration: underline;
+        }
+        .project-link i {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Footer styling */
+        .site-footer {
+            background-color: #2d3748;
+            color: #f7fafc;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .footer-text {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navbar - updated style -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Project Hub</a>
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-code mr-2"></i>Project Hub
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon bg-light rounded"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <!-- Dropdown for your projects -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            SIMPLE WEB
+                            <i class="fas fa-globe mr-1"></i>SIMPLE WEB
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./english.html">QUIZ 1</a></li>
-                            <li><a class="dropdown-item" href="./simple_english_quiz.html">QUIZ 2</a></li>
-                            <li><a class="dropdown-item" href="./order/index.html">Simple Menu</a></li>
-                            <li><a class="dropdown-item" href="./attendance-presence-tracker/Index.html">Pulse</a></li>
-                            <li><a class="dropdown-item" href="./project2/index.html">Project 2</a></li> -->
+                            <li><a class="dropdown-item" href="./english.html"><i class="fas fa-question-circle mr-1"></i>QUIZ 1</a></li>
+                            <li><a class="dropdown-item" href="./simple_english_quiz.html"><i class="fas fa-question-circle mr-1"></i>QUIZ 2</a></li>
+                            <li><a class="dropdown-item" href="./order/index.html"><i class="fas fa-utensils mr-1"></i>Simple Menu</a></li>
+                            <li><a class="dropdown-item" href="./attendance-presence-tracker/Index.html"><i class="fas fa-heartbeat mr-1"></i>Pulse</a></li>
+                            <li><a class="dropdown-item" href="./project2/index.html"><i class="fas fa-project-diagram mr-1"></i>Project 2</a></li>
                         </ul>
+                    </li>
+                    <!-- Add more categories here later if you need them -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="fas fa-info-circle mr-1"></i>About</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Optional Bootstrap JS -->
+    <!-- Hero Welcome Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">My Small Projects Collection</h1>
+            <p class="hero-subtitle">A place to organize and showcase all my web development experiments, practice work, and mini-projects - each one built to learn something new!</p>
+        </div>
+    </div>
+
+    <!-- Projects Display Section -->
+    <div class="projects-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <!-- Simple Web Projects Category -->
+                    <div class="category-card">
+                        <h2 class="category-title">
+                            <i class="fas fa-globe mr-2"></i>Simple Web Projects
+                        </h2>
+                        <div class="project-list">
+                            <div class="project-item">
+                                <a href="./english.html" class="project-link">
+                                    <i class="fas fa-question-circle"></i>QUIZ 1 - English Practice Quiz
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="./simple_english_quiz.html" class="project-link">
+                                    <i class="fas fa-question-circle"></i>QUIZ 2 - Advanced English Quiz
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="./order/index.html" class="project-link">
+                                    <i class="fas fa-utensils"></i>Simple Menu - Food Order Interface
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="./attendance-presence-tracker/Index.html" class="project-link">
+                                    <i class="fas fa-heartbeat"></i>Pulse - Attendance & Presence Tracker
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="./project2/index.html" class="project-link">
+                                    <i class="fas fa-project-diagram"></i>Project 2 - [Add your project name here!]
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- You can add more category cards here as you build more projects -->
+                    <!-- Example:
+                    <div class="category-card">
+                        <h2 class="category-title">
+                            <i class="fas fa-mobile-alt mr-2"></i>Mobile-First Projects
+                        </h2>
+                        <div class="project-list">
+                            <div class="project-item">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-calculator"></i>Basic Mobile Calculator
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section (for extra context) -->
+    <div id="about" class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <h3 class="mb-3">About This Hub</h3>
+                <p class="text-muted">This repository holds all my small practice projects as I learn web development. Every project here represents a new skill or concept I've worked to understand - from basic HTML/CSS to interactive scripts!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-text">
+                <i class="fas fa-code mr-1"></i> My Project Hub | Built with passion for learning
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
